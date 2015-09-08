@@ -301,6 +301,15 @@ export default class CreatePost extends React.Component {
             postFooterClassName += ' has-error';
         }
 
+        const sendButton = (
+            <a
+                className='theme'
+                onClick={this.handleSubmit}
+            >
+                <i className='fa fa-paper-plane' />
+            </a>
+        );
+
         return (
             <form
                 id='create_post'
@@ -329,6 +338,7 @@ export default class CreatePost extends React.Component {
                             postType='post'
                             channelId=''
                         />
+                        {sendButton}
                     </div>
                     <div className={postFooterClassName}>
                         {postError}
